@@ -15,10 +15,12 @@ You have to find the number of open doors at the end of the procedure.
 #define ll unsigned long long
 using namespace std;
 
-int openDoor(int);
+ll openDoor(ll);
 
 int main(){
-    int t, n;
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    ll t, n;
 
     cin >> t;
     while(t--){
@@ -28,12 +30,12 @@ int main(){
     return 0;
 }
 
-int openDoor(int n){
-    int count = 0;
+ll openDoor(ll n){
+    ll count = 0;
 
-    for(int i = 1; i <= n; i++){
-        int temp = sqrt(i);
-        if(temp * temp == i)
+    for(ll i = 1; i <= n; i++){
+        ll temp = sqrt(i);
+        if((temp * temp) == i)
             count++;
     }
     return count;
