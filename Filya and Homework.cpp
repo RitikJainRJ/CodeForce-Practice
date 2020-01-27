@@ -20,7 +20,12 @@ int main(){
             return 0;
         }
     }
-    temp = arr[n - 1] - arr[m];
+    int temp2 = arr[n - 1] - arr[m];
+    if(temp != temp2 && arr[n - 1] != arr[m]){
+        cout << "NO";
+        return 0;
+    }
+    temp2 = arr[n - 1] - arr[m];
     for(int i = m + 1; i < n; i++){
         if(arr[i] == arr[m])
             continue;
